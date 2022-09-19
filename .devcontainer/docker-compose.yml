@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web-portfolio:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: web-portfolio/dev
+    container_name: web-portfolio
+    ports:
+      - 3000:3000
+    volumes:
+      - ../:/home/web-portfolio
+    entrypoint: bash
+    tty: true
